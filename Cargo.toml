@@ -1,0 +1,6 @@
+[package]
+name = "grimheim"
+version = "0.1.0"
+authors = ["Michael Blockley <mikey@spotify.com>"]
+
+[dependencies]
