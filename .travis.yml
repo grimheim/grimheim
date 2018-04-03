@@ -25,7 +25,8 @@ before_install:
         libdw-dev \
         cmake \
         gcc \
-        binutils-dev
+        binutils-dev \
+        libiberty-dev
     fi
 
 # TODO: this seems bugged
