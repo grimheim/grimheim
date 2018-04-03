@@ -24,6 +24,7 @@ addons:
       - gcc
       - binutils-dev
       - libiberty-dev
+      - xvfb
 
 # Add clippy
 before_script:
