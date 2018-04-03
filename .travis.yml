@@ -37,7 +37,7 @@ before_script:
 # The main build
 script:
   - cargo build
-  - cargo test
+  - xvfb-run cargo test
 
 after_success:
 # Upload docs
