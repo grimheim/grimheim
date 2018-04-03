@@ -44,7 +44,7 @@ script:
   - cargo test --lib
   - |
     if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      cargo test --bin
+      cargo test --bins
     fi
 
 after_success:
