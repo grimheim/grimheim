@@ -15,15 +15,18 @@ rust:
 # - 1.0.0
 
 before_install:
-  - sudo apt-get update
   - export DEBIAN_FRONTEND=noninteractive
-  - sudo apt-get install -y --no-install-suggests --no-install-recommends
-      libcurl4-openssl-dev
-      libelf-dev
-      libdw-dev
-      cmake
-      gcc
-      binutils-dev
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      sudo apt-get update
+      sudo apt-get install -y --no-install-suggests --no-install-recommends
+        libcurl4-openssl-dev
+        libelf-dev
+        libdw-dev
+        cmake
+        gcc
+        binutils-dev
+    fi
 
 # TODO: this seems bugged
 #addons:
