@@ -34,11 +34,18 @@ before_script:
         || export CLIPPY=false );
       fi
   - export PATH=$PATH:~/.cargo/bin
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
 
 # The main build
 script:
   - cargo build
-  - xvfb-run cargo test
+  - cargo test --lib
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      cargo test --bin
+    fi
 
 after_success:
 # Upload docs
