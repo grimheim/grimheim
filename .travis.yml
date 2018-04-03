@@ -16,16 +16,25 @@ rust:
 
 before_install:
   - sudo apt-get update
+  - export DEBIAN_FRONTEND=noninteractive
+  - sudo apt-get install -y --no-install-suggests --no-install-recommends \
+      libcurl4-openssl-dev\
+      libelf-dev\
+      libdw-dev\
+      cmake\
+      gcc\
+      binutils-dev
 
-addons:
-  apt:
-    packages:
-      - libcurl4-openssl-dev
-      - libelf-dev
-      - libdw-dev
-      - cmake
-      - gcc
-      - binutils-dev
+# TODO: this seems bugged
+#addons:
+#  apt:
+#    packages:
+#      - libcurl4-openssl-dev
+#      - libelf-dev
+#      - libdw-dev
+#      - cmake
+#      - gcc
+#      - binutils-dev
 
 # Add clippy
 before_script:
