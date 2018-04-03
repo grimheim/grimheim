@@ -18,13 +18,13 @@ before_install:
   - export DEBIAN_FRONTEND=noninteractive
   - |
     if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      sudo apt-get update
-      sudo apt-get install -y --no-install-suggests --no-install-recommends
-        libcurl4-openssl-dev
-        libelf-dev
-        libdw-dev
-        cmake
-        gcc
+      sudo apt-get update &&
+      sudo apt-get install -y --no-install-suggests --no-install-recommends \
+        libcurl4-openssl-dev \
+        libelf-dev \
+        libdw-dev \
+        cmake \
+        gcc \
         binutils-dev
     fi
 
