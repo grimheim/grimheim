@@ -32,9 +32,13 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use piston::window::{AdvancedWindow, OpenGLWindow};
 
     #[test]
     fn make_window() {
-        create_window();
+        let window = create_window();
+        assert_eq!(window.get_title(), "Grimheim".to_string());
+        assert!(window.get_exit_on_esc());
+        assert!(window.is_current());
     }
 }
