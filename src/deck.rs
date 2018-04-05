@@ -1,5 +1,8 @@
+//! A deck of cards
+
 use cards::Card;
 
+/// The deck of cards
 pub struct Deck<T: Card + Clone> {
     cards: Vec<T>
 }

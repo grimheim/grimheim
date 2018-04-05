@@ -1,3 +1,5 @@
+//! The central game state
+
 struct GameState { }
 
 impl GameState {
@@ -6,6 +8,7 @@ impl GameState {
     }
 }
 
+/// Start a new game
 pub fn start() {
-    let gs = GameState::new();
+    let _gs = GameState::new();
 }

@@ -1,3 +1,5 @@
+//! The cards available in grimheim
+
 pub mod action_card;
 pub mod card;
 

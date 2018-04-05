@@ -1,5 +1,10 @@
+//! A card which intiates an action
+//!
+//! This should be used for all combat style cards
+
 use super::card::Card;
 
+/// A card which performs an action
 pub struct ActionCard {
     name: String,
 }

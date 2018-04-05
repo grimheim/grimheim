@@ -1,3 +1,13 @@
+//! Grimheim board
+//!
+//! I honestly have no idea if this is going to work, but I needed to write
+//! something to get started, this is probably going to be a good spot to
+//! refactor when I am more comforable.
+//!
+//! Each tile is 2 offset, (this allows for a 1 offset to interlock rows)
+//! TODO: I dislike the current board constructor, this should be fixed
+//! TODO: Should sanity check to make sure offsets are even/odd
+
 #[derive(Debug, PartialEq)]
 struct Tile { }
 
@@ -65,8 +75,8 @@ mod tests {
         let rows = [(0, 10), (2, 8), (4, 4)];
         let b = Board::new(&rows);
         for (i, row) in rows.iter().enumerate() {
-            assert_eq!(b.rows[i].offset, rows[i].0);
-            assert_eq!(b.rows[i].tiles.len(), rows[i].1 as usize);
+            assert_eq!(b.rows[i].offset, row.0);
+            assert_eq!(b.rows[i].tiles.len(), row.1 as usize);
         }
     }
 }
