@@ -4,6 +4,7 @@ name = "grimheim"
 version = "0.1.0"
 
 [dependencies]
+bitflags = "1.0.1"
 piston = "0.36.0"
 piston2d-graphics = "0.26.0"
 piston2d-opengl_graphics = "0.52.0"
