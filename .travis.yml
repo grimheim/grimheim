@@ -25,6 +25,7 @@ addons:
       - binutils-dev
       - libiberty-dev
       - xvfb
+      - libczmq-dev
 
 # Add clippy
 before_script:
