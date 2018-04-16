@@ -27,6 +27,13 @@ addons:
       - xvfb
       - libczmq-dev
 
+before_install:
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then
+      brew update
+      brew install zmq
+    fi
+
 # Add clippy
 before_script:
   - |
