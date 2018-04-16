@@ -56,7 +56,8 @@ before_script:
 
 # The main build
 script:
-  - cargo build
+  # TODO: remove this when ZMQ_HAS is stabilised
+  - cargo build --no-default-features
   - cargo test --lib
   - |
     if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
