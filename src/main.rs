@@ -6,13 +6,11 @@ extern crate glutin_window;
 extern crate graphics;
 extern crate opengl_graphics;
 extern crate piston;
-extern crate zmq;
 
 use glutin_window::GlutinWindow;
 use opengl_graphics::OpenGL;
 use piston::event_loop::{Events, EventLoop, EventSettings};
 use piston::window::WindowSettings;
-use zmq::Context;
 
 fn create_window() -> Result<GlutinWindow, String> {
     let opengl = OpenGL::V3_2;
@@ -26,7 +24,6 @@ fn create_window() -> Result<GlutinWindow, String> {
 fn main() {
     let mut window = create_window().expect("Could not create window");
     let mut events = Events::new(EventSettings::new().lazy(true));
-    let mut _context = Context::new();
 
     while let Some(_e) = events.next(&mut window) {
     }
