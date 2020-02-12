@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["start","Start a new game"]]});

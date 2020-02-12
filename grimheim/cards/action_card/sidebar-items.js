@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["ActionCard","A card which performs an action"]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["action_card","A card which intiates an action"],["card","A card"]]});
