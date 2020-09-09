@@ -28,17 +28,3 @@ fn main() {
     while let Some(_e) = events.next(&mut window) {
     }
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-    use piston::window::{AdvancedWindow, OpenGLWindow};
-
-    #[test]
-    fn make_window() {
-        let window = create_window().unwrap();
-        assert_eq!(window.get_title(), "Grimheim".to_string());
-        assert!(window.get_exit_on_esc());
-        assert!(window.is_current());
-    }
-}
